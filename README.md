@@ -1,2 +1,12 @@
-# shared
-Course content for CSD 412 taught by Vishesh Khemani at LWTech in the winter of 2026.
+# CSD 412: Web Application Devlopment
+
+Lake Washington Institute of Technology
+
+Fall'25
+
+Vishesh Khemani
+
+---
+
+- [Syllabus](syllabus.md) 
+- [Lecture notes and slides](notes/index.md)
