@@ -1,5 +1,7 @@
 # Introduction
 
+Slides: [introduction-slides.pdf](./pdfs/introduction-slides.pdf)
+
 ## What's a Web App?
 
 ### Local App
