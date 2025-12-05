@@ -48,7 +48,7 @@ Starting with the simplest case
 </div>
 <div>
 
-![width:100%](/notes/images/local-app.excalidraw.svg)
+![width:100%](images/local-app.excalidraw.svg)
 
 </div>
 </div>
@@ -84,7 +84,7 @@ print(f"The sum is: {result}")
 </div>
 <div>
 
-![width:100%](/notes/images/local-browser-app.excalidraw.svg)
+![width:100%](images/local-browser-app.excalidraw.svg)
 
 </div>
 </div>
@@ -151,7 +151,7 @@ Opens directly in your browser - no server required!
 </div>
 <div>
 
-![width:400px](/notes/images/client-server-app.excalidraw.svg)
+![width:400px](images/client-server-app.excalidraw.svg)
 
 </div>
 </div>
@@ -197,7 +197,7 @@ What response do you get?
 </div>
 <div>
 
-![width:100%](/notes/images/client-server-http-app.excalidraw.svg)
+![width:100%](images/client-server-http-app.excalidraw.svg)
 
 </div>
 </div>
@@ -246,7 +246,7 @@ User sees the rendered page!
 </div>
 <div>
 
-![width:100%](/notes/images/browser-server-app.excalidraw.svg)
+![width:100%](images/browser-server-app.excalidraw.svg)
 
 </div>
 </div>
@@ -477,7 +477,7 @@ IP addresses are like postal addresses for computers:
 
 </div><div>
 
-![height:500px](/notes/images/browser-dns-server-interaction.svg)
+![height:500px](images/browser-dns-server-interaction.svg)
 
 </div></div>
 
@@ -499,7 +499,7 @@ IP addresses are like postal addresses for computers:
 
 </div><div>
 
-![height:500px](/notes/images/browser-dns-server-interaction.svg)
+![height:500px](images/browser-dns-server-interaction.svg)
 
 </div></div>
 
@@ -524,7 +524,7 @@ Request includes:
 
 </div><div>
 
-![height:500px](/notes/images/browser-dns-server-interaction.svg)
+![height:500px](images/browser-dns-server-interaction.svg)
 
 </div></div>
 
@@ -543,7 +543,7 @@ Request includes:
 
 </div><div>
 
-![height:500px](/notes/images/browser-dns-server-interaction.svg)
+![height:500px](images/browser-dns-server-interaction.svg)
 
 </div></div>
 
@@ -568,7 +568,7 @@ Content-Length: 1234
 
 </div><div>
 
-![height:500px](/notes/images/browser-dns-server-interaction.svg)
+![height:500px](images/browser-dns-server-interaction.svg)
 
 </div></div>
 
@@ -582,14 +582,14 @@ Content-Length: 1234
 1. Parses HTML structure
 2. Loads CSS (styling)
 3. Loads JavaScript (interactivity)
-4. Loads /notes/images and other resources
+4. Loads images and other resources
 5. Renders the page on screen
 
 **Each CSS file, JS file, image = another HTTP request!**
 
 </div><div>
 
-![height:500px](/notes/images/browser-dns-server-interaction.svg)
+![height:500px](images/browser-dns-server-interaction.svg)
 
 </div></div>
 
@@ -601,7 +601,7 @@ Content-Length: 1234
 - 1 for HTML
 - 5 for CSS files
 - 10 for JavaScript files
-- 30+ for /notes/images
+- 30+ for images
 - Several for fonts, icons, etc.
 
 Each follows the same request/response pattern!
