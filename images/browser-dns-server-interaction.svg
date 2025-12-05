@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1020" width="1000" height="1020">
+  <!-- Background -->
+  <rect width="1000" height="900" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="500" y="40" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#333">
+    Browser → DNS → Server Interaction
+  </text>
+  <text x="500" y="65" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#666">
+    What happens when you visit gmail.com
+  </text>
+  
+  <!-- Three main boxes -->
+  
+  <!-- Browser Box -->
+  <rect x="50" y="120" width="200" height="100" rx="10" fill="#e3f2fd" stroke="#4285f4" stroke-width="4"/>
+  <text x="150" y="155" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#333">🌐 Browser</text>
+  <text x="150" y="180" font-family="Arial" font-size="13" text-anchor="middle" fill="#666">Chrome, Firefox,</text>
+  <text x="150" y="200" font-family="Arial" font-size="13" text-anchor="middle" fill="#666">Safari, etc.</text>
+  
+  <!-- DNS Server Box -->
+  <rect x="400" y="120" width="200" height="100" rx="10" fill="#f3e5f5" stroke="#9c27b0" stroke-width="4"/>
+  <text x="500" y="155" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#333">🔍 DNS Server</text>
+  <text x="500" y="180" font-family="Arial" font-size="13" text-anchor="middle" fill="#666">Domain Name</text>
+  <text x="500" y="200" font-family="Arial" font-size="13" text-anchor="middle" fill="#666">System</text>
+  
+  <!-- Gmail Server Box -->
+  <rect x="750" y="120" width="200" height="100" rx="10" fill="#ffebee" stroke="#ea4335" stroke-width="4"/>
+  <text x="850" y="155" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#333">🔴 Gmail Server</text>
+  <text x="850" y="180" font-family="Arial" font-size="13" text-anchor="middle" fill="#666">Google's web</text>
+  <text x="850" y="200" font-family="Arial" font-size="13" text-anchor="middle" fill="#666">server</text>
+  
+  <!-- Interaction Steps -->
+  
+  <!-- Step 1: DNS Query -->
+  <g id="step1">
+    <circle cx="30" cy="280" r="20" fill="#4285f4"/>
+    <text x="30" y="287" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="white">1</text>
+    
+    <!-- Arrow from Browser to DNS -->
+    <line x1="250" y1="280" x2="390" y2="280" stroke="#4285f4" stroke-width="3" marker-end="url(#arrowblue)"/>
+    
+    <!-- Label above arrow -->
+    <rect x="260" y="245" width="130" height="25" rx="5" fill="#e3f2fd" stroke="#4285f4" stroke-width="2"/>
+    <text x="325" y="262" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#333">DNS Query</text>
+    
+    <!-- Description below -->
+    <text x="320" y="305" font-family="Arial" font-size="11" text-anchor="middle" fill="#666">"What is gmail.com's IP?"</text>
+  </g>
+  
+  <!-- Step 2: DNS Response -->
+  <g id="step2">
+    <circle cx="30" cy="360" r="20" fill="#4285f4"/>
+    <text x="30" y="367" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="white">2</text>
+    
+    <!-- Arrow from DNS to Browser -->
+    <line x1="390" y1="360" x2="250" y2="360" stroke="#9c27b0" stroke-width="3" marker-end="url(#arrowpurple)"/>
+    
+    <!-- Label above arrow -->
+    <rect x="260" y="325" width="130" height="25" rx="5" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2"/>
+    <text x="325" y="342" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#333">DNS Response</text>
+    
+    <!-- Description below -->
+    <text x="320" y="385" font-family="Arial" font-size="11" text-anchor="middle" fill="#666">"IP: 142.250.185.37"</text>
+  </g>
+  
+  <!-- Step 3: TCP Handshake -->
+  <g id="step3">
+    <circle cx="30" cy="450" r="20" fill="#4285f4"/>
+    <text x="30" y="457" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="white">3</text>
+    
+    <!-- Arrow from Browser to Server -->
+    <line x1="250" y1="450" x2="740" y2="450" stroke="#4285f4" stroke-width="3" marker-end="url(#arrowblue)"/>
+    
+    <!-- Label above arrow -->
+    <rect x="420" y="415" width="150" height="25" rx="5" fill="#e3f2fd" stroke="#4285f4" stroke-width="2"/>
+    <text x="495" y="432" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#333">TCP Connection</text>
+    
+    <!-- Description below -->
+    <text x="495" y="475" font-family="Arial" font-size="11" text-anchor="middle" fill="#666">Three-way handshake (SYN, SYN-ACK, ACK)</text>
+  </g>
+  
+  <!-- Step 4: TLS Handshake -->
+  <g id="step4">
+    <circle cx="30" cy="530" r="20" fill="#4285f4"/>
+    <text x="30" y="537" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="white">4</text>
+    
+    <!-- Bidirectional arrows -->
+    <line x1="250" y1="520" x2="740" y2="520" stroke="#fbbc04" stroke-width="2" marker-end="url(#arrowyellow)"/>
+    <line x1="740" y1="540" x2="250" y2="540" stroke="#fbbc04" stroke-width="2" marker-end="url(#arrowyellow)"/>
+    
+    <!-- Label above arrow -->
+    <rect x="420" y="485" width="150" height="25" rx="5" fill="#fff9e6" stroke="#fbbc04" stroke-width="2"/>
+    <text x="495" y="502" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#333">TLS/SSL Handshake</text>
+    
+    <!-- Description below -->
+    <text x="495" y="565" font-family="Arial" font-size="11" text-anchor="middle" fill="#666">Exchange keys, establish encrypted HTTPS connection 🔒</text>
+  </g>
+  
+  <!-- Step 5: HTTP Request -->
+  <g id="step5">
+    <circle cx="30" cy="630" r="20" fill="#4285f4"/>
+    <text x="30" y="637" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="white">5</text>
+    
+    <!-- Arrow from Browser to Server -->
+    <line x1="250" y1="630" x2="740" y2="630" stroke="#4285f4" stroke-width="3" marker-end="url(#arrowblue)"/>
+    
+    <!-- Label above arrow -->
+    <rect x="420" y="595" width="150" height="25" rx="5" fill="#e3f2fd" stroke="#4285f4" stroke-width="2"/>
+    <text x="495" y="612" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#333">HTTP GET Request</text>
+    
+    <!-- Description below -->
+    <text x="495" y="655" font-family="Arial" font-size="11" text-anchor="middle" fill="#666">GET / HTTP/1.1</text>
+    <text x="495" y="670" font-family="Arial" font-size="11" text-anchor="middle" fill="#666">Host: gmail.com</text>
+  </g>
+  
+  <!-- Step 6: HTTP Response -->
+  <g id="step6">
+    <circle cx="30" cy="730" r="20" fill="#4285f4"/>
+    <text x="30" y="737" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="white">6</text>
+    
+    <!-- Arrow from Server to Browser -->
+    <line x1="740" y1="730" x2="250" y2="730" stroke="#ea4335" stroke-width="3" marker-end="url(#arrowred)"/>
+    
+    <!-- Label above arrow -->
+    <rect x="420" y="695" width="150" height="25" rx="5" fill="#ffebee" stroke="#ea4335" stroke-width="2"/>
+    <text x="495" y="712" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#333">HTTP Response</text>
+    
+    <!-- Description below -->
+    <text x="495" y="755" font-family="Arial" font-size="11" text-anchor="middle" fill="#666">HTTP/1.1 200 OK</text>
+    <text x="495" y="770" font-family="Arial" font-size="11" text-anchor="middle" fill="#666">HTML content (Gmail page)</text>
+  </g>
+  
+  <!-- Step 7: Fetch Additional Resources -->
+  <g id="step7">
+    <circle cx="30" cy="840" r="20" fill="#4285f4"/>
+    <text x="30" y="847" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="white">7</text>
+    
+    <!-- Multiple arrows showing back and forth -->
+    <line x1="250" y1="825" x2="740" y2="825" stroke="#4285f4" stroke-width="2" marker-end="url(#arrowblue)" stroke-dasharray="5,5"/>
+    <line x1="740" y1="835" x2="250" y2="835" stroke="#ea4335" stroke-width="2" marker-end="url(#arrowred)" stroke-dasharray="5,5"/>
+    <line x1="250" y1="845" x2="740" y2="845" stroke="#4285f4" stroke-width="2" marker-end="url(#arrowblue)" stroke-dasharray="5,5"/>
+    <line x1="740" y1="855" x2="250" y2="855" stroke="#ea4335" stroke-width="2" marker-end="url(#arrowred)" stroke-dasharray="5,5"/>
+    
+    <!-- Label above arrows -->
+    <rect x="380" y="790" width="230" height="25" rx="5" fill="#e3f2fd" stroke="#4285f4" stroke-width="2"/>
+    <text x="495" y="807" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#333">Fetch Additional Resources</text>
+    
+    <!-- Description below -->
+    <text x="495" y="880" font-family="Arial" font-size="11" text-anchor="middle" fill="#666">Browser requests CSS files, JavaScript, images, fonts</text>
+    <text x="495" y="895" font-family="Arial" font-size="11" text-anchor="middle" fill="#666">(Multiple HTTP requests for each resource)</text>
+  </g>
+  
+  <!-- Step 8: Render -->
+  <g id="step8">
+    <circle cx="30" cy="950" r="20" fill="#34a853"/>
+    <text x="30" y="957" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="white">8</text>
+    
+    <rect x="70" y="920" width="180" height="60" rx="10" fill="#e8f5e9" stroke="#34a853" stroke-width="3"/>
+    <text x="160" y="945" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#333">🎨 Browser Renders</text>
+    <text x="160" y="965" font-family="Arial" font-size="11" text-anchor="middle" fill="#666">You see Gmail!</text>
+  </g>
+  
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowblue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#4285f4"/>
+    </marker>
+    <marker id="arrowpurple" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#9c27b0"/>
+    </marker>
+    <marker id="arrowred" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#ea4335"/>
+    </marker>
+    <marker id="arrowyellow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#fbbc04"/>
+    </marker>
+  </defs>
+</svg>
